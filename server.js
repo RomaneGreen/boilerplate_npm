@@ -56,12 +56,3 @@ app.use(function(err, req, res, next) {
 app.listen(process.env.PORT, function () {
   console.log('Node.js listening ...');
 });
-
-let jsonTpl= `{
-  "author": "John Doe",
-  "description": "freeCodeCamp - Apis And Microservices Certification (300 hours)"
-}`;
-app.get('/_api/package.json',function(req,res){
-  res.json(jsonTpl);
-  res.end();
-});
